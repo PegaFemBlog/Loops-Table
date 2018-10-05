@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Types of Loops</title>
+</head>
+<body>
+<script>
+function getPlayers() {
+  var player = prompt("Enter the name of a player: ", " ");
+  var points = prompt("Enter the points this player has: ", " ");
+  document.write('<table width="40%" border="1">');
+  
+  while (player != "done")
+    {
+      document.write('<tr>');
+      document.write('<td width="50">' + player + '</td>');
+      document.write('<td width="50">' + points + '</td>');
+      document.write('</tr>');
+      
+      player = prompt("Enter the name of a player or enter 'done' when you are finished:", " ");
+      points = prompt("Enter the points this player has or 0 if finished:", " ");
+     }
+     document.write('</table>');
+ }
+</script>
+
+<input type="button" onclick="getPlayers();">Click Me!</button>
+
+
+</body>
+</html>
