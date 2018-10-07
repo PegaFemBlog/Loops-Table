@@ -5,6 +5,7 @@
 </head>
 <body>
 <script>
+/*
 function getPlayers() {
   var player = prompt("Enter the name of a player: ", " ");
   var points = prompt("Enter the points this player has: ", " ");
@@ -21,11 +22,28 @@ function getPlayers() {
       points = prompt("Enter the points this player has or 0 if finished:", " ");
      }
      document.write('</table>');
- }
+ }*/
+ 
+ function getStuff() {
+ document.write('<table width="40%" border="1" align="center">');
+ var num = 0;
+ var item = ' ';
+ document.write('<h1>&nbsp;</h1>');
+ 		while (num < 10)
+		{
+			item = prompt('What do you choose for item number ' + (num + 1) + "?");
+			document.write('<tr>');
+			document.write('<td>' + item  +  (num + 1) + ' : ' + item + '</td>');
+ 			document.write('</tr>');
+			num = num + 1;
+		}
+		document.write('</table>');
+}
 </script>
 
-<input type="button" onclick="getPlayers();">Click Me!</button>
+<p><input type="button" onclick="getPlayers();" value="Get Players!"></p>
 
+<p><input type="button" onclick="getStuff();" value="Get Stuff!"></p>
 
 </body>
 </html>
